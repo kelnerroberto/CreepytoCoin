@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import FetchMainCurrencies from '../API/FetchFunc';
+import { FetchMainCurrencies } from '../API/FetchFunc';
 import AppContext from './AppContext';
 
 function Provider({ children }) {

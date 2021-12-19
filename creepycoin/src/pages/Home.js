@@ -1,4 +1,5 @@
 import React from "react";
+import ExchangeResourceBTN from "../components/ExchangeResourceBTN";
 import Header from "../components/Headers";
 import HomeMainContent from "../components/HomeMainContent";
 

@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <header className="Header">
       <div>
-        <h3>creepycoin.com</h3>
+        <h3>creepytocoin.com</h3>
       </div>
       <div>
         <input type='text' />

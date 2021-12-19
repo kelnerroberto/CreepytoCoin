@@ -5,3 +5,11 @@
   width: 100%;
   height: auto;
 }
+
+.positive-24 {
+  color: green;
+}
+
+.negative-24 {
+  color: red;
+}

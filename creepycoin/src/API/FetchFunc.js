@@ -5,4 +5,9 @@ export async function FetchMainCurrencies(){
   return results;
 }
 
-export default FetchMainCurrencies;
+export async function FetchExchangeToBRL() {
+  const response = await fetch('https://cat-fact.herokuapp.com/facts');
+  const json = await response.json();
+  console.log(json);
+  //return results;
+}
