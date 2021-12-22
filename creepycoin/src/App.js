@@ -2,14 +2,14 @@ import './App.css';
 import React from 'react';
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import Home from './pages/Home';
-import Me from './pages/Me';
+import DetailedCurrency from './pages/DetailedCurrency';
 
 function App() {
   return (
     <BrowserRouter>
     <Routes>
       <Route path="/" element={ <Home /> } />
-      <Route path="/me" element={ < Me/>} />
+      <Route path="/asset/:assetname" element={ < DetailedCurrency/>} />
     </Routes>
     </BrowserRouter>
   );

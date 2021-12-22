@@ -4,5 +4,3 @@ export async function FetchMainCurrencies(){
   const results = await json.data;
   return results;
 }
-
-export default FetchMainCurrencies;
