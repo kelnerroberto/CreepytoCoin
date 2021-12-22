@@ -13,3 +13,8 @@
 .negative-24 {
   color: red;
 }
+
+.detailed-percentage {
+  display: flex;
+  flex-direction: row;
+}

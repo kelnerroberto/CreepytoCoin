@@ -5,6 +5,8 @@ import MapTheCurrencies from './helpers/MapTheCurrencies';
 const HomeMainContent = () => {
   const {currencies, isLoaded} = useContext(AppContext);
 
+  console.log(currencies);
+
   return (
     isLoaded ?
     MapTheCurrencies(currencies)
