@@ -11,9 +11,25 @@ const MapTheCurrencies = (currencies) => {
     <thead>
       <tr>
         <th></th>
-        <th>Currency</th>
-        <th>Variation today</th>
-        <th>Current Value</th>
+        <th><button
+        className="table-btns" 
+        type="button" 
+        onClick={() => console.log('moed')}>
+          Currency
+        </button></th>
+        <th>
+        <button
+        className="table-btns" 
+        type="button" 
+        onClick={() => console.log('var')}>
+          Variation today
+        </button></th>
+        <th><button
+        className="table-btns" 
+        type="button" 
+        onClick={() => console.log('curr')}>
+          Current Value
+        </button></th>
       </tr>
     </thead>
     <tbody>
