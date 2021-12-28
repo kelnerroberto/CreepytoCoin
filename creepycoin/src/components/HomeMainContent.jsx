@@ -3,13 +3,16 @@ import AppContext from '../context/AppContext';
 import MapTheCurrencies from './helpers/MapTheCurrencies';
 
 const HomeMainContent = () => {
-  const {currencies, orderedTable, setClickedOrderTable, isLoaded} = useContext(AppContext);
-  
-  console.log(orderedTable);
+  const {
+    currencies, 
+    orderedTable, 
+    setClickedOrderTable, 
+    isLoaded,
+    isOrderedClicked} = useContext(AppContext);
 
   return (
     isLoaded ?
-    MapTheCurrencies(currencies, orderedTable, setClickedOrderTable)
+    MapTheCurrencies(currencies, orderedTable, setClickedOrderTable, isOrderedClicked)
     :
     'Carregando...'
   )

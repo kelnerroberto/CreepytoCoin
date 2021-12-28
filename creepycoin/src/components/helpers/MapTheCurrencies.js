@@ -1,33 +1,61 @@
 import React from "react";
 
-const MapTheCurrencies = (currencies, orderedTable, setClickedOrderTable) => {
+const MapTheCurrencies = (currencies, orderedTable, setClickedOrderTable, isOrderedClicked) => {
   const replaceDot = (price) => {
     const roundedNumb = `${Math.round(price * 100000) / 100000}`.replace(".", ",");
     return roundedNumb;
   }
 
+  const handleOrderClicked = (value) => {
+    if (value === 'currency') {
+      if (isOrderedClicked === 'orderedByCurrency') {
+        setClickedOrderTable('orderReverseByCurrency')
+      }
+      else {
+        setClickedOrderTable(value)
+      }
+    }
+    if (value === 'variationToday') {
+      if (isOrderedClicked === 'orderedByVariation') {
+        setClickedOrderTable('orderReverseByVariation');
+      } 
+      else {
+        setClickedOrderTable(value)
+      }
+    }
+    if (value === 'currentValue') {
+      if (isOrderedClicked === 'orderedByCurrentValue') {
+        setClickedOrderTable('orderReverseByCurrentValue');
+      }
+      else {
+        setClickedOrderTable(value);
+      }
+    }
+  }
+
   return (
-  <table className="main-table">
+  <div className="table-wrapper">
+  <table className="fl-table">
     <thead>
       <tr>
         <th></th>
         <th><button
         className="table-btns" 
         type="button" 
-        onClick={() => setClickedOrderTable('currency')}>
+        onClick={() => handleOrderClicked('currency')}>
           Currency
         </button></th>
         <th>
         <button
         className="table-btns" 
         type="button" 
-        onClick={() => setClickedOrderTable('variationToday')}>
+        onClick={() => handleOrderClicked('variationToday')}>
           Variation today
         </button></th>
         <th><button
         className="table-btns" 
         type="button" 
-        onClick={() => setClickedOrderTable('currentValue')}>
+        onClick={() => handleOrderClicked('currentValue')}>
           Current Value
         </button></th>
       </tr>
@@ -57,6 +85,7 @@ const MapTheCurrencies = (currencies, orderedTable, setClickedOrderTable) => {
         ))}
     </tbody>
   </table>
+  </div>
   )
 }
 
