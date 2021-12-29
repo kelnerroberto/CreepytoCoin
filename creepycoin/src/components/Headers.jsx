@@ -24,7 +24,10 @@ const Header = () => {
         <h3>creepytocoin.com</h3>
       </div>
       <div>
-        <input type='text' onChange={(event) => handleChange(event)} />
+        <input 
+        type='text' 
+        onChange={(event) => handleChange(event)} 
+        placeholder="Search..."/>
         <button type="button" onClick={() => searchByNameBtn()}>Pesquisar</button>
       </div>
     </header>
