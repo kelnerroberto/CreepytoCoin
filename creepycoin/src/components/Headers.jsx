@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import AppContext from "../context/AppContext";
 import { useNavigate } from 'react-router-dom';
+import '../Header.css';
 
 const Header = () => {
   const [searchBarResult, setSearchBarResult] = useState('');
@@ -18,16 +19,20 @@ const Header = () => {
     navigate(`/asset/${searchedItem[0].name.toLowerCase()}`);
   }
 
+  const backToHomePage = () => {
+    navigate(`/`);
+  }
+
   return (
-    <header className="Header">
+    <div className="Header">
       <div>
-        <h3>creepytocoin.com</h3>
+        <h3 className="WebSiteName-Header" onClick={() => backToHomePage()}>creepytocoin.com</h3>
       </div>
       <div>
         <input type='text' onChange={(event) => handleChange(event)} />
         <button type="button" onClick={() => searchByNameBtn()}>Pesquisar</button>
       </div>
-    </header>
+    </div>
   )
 }
 
