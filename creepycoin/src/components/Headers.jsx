@@ -12,8 +12,8 @@ const Header = () => {
   }
 
   const searchByNameBtn = () => {
-    const searchedItem = currencies.filter((eachCurr) => eachCurr.name.toUpperCase() === searchBarResult.toUpperCase());
-    console.log(searchedItem);
+    const searchedItem = currencies
+      .filter((eachCurr) => eachCurr.name.toUpperCase().includes(searchBarResult.toUpperCase()));
     setSearchedCurrency(searchedItem);
     navigate(`/asset/${searchedItem[0].name.toLowerCase()}`);
   }

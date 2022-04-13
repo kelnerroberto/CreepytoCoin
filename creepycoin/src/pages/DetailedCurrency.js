@@ -4,7 +4,6 @@ import AppContext from "../context/AppContext";
 
 const DetailedCurrency = () => {
   const {searchedCurrency} = useContext(AppContext);
-  console.log(searchedCurrency);
   const actualCurr = searchedCurrency[0];
 
   return (
