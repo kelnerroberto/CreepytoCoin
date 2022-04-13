@@ -9,7 +9,7 @@ function App() {
     <BrowserRouter>
     <Routes>
       <Route path="/" element={ <Home /> } />
-      <Route path="/asset/:assetname" element={ < DetailedCurrency/>} />
+      <Route path="/asset/:assetname" element={ < DetailedCurrency/> } />
     </Routes>
     </BrowserRouter>
   );
