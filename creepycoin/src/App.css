@@ -50,13 +50,13 @@
 
 .fl-table thead th {
   color: #ffffff;
-  background: #46ca6e;
+  background: #24a000;
 }
 
 
 .fl-table thead th:nth-child(odd) {
   color: #ffffff;
-  background: #32604d;
+  background: #1f4129;
 }
 
 .fl-table tr:nth-child(even) {

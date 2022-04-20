@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import AppContext from "../context/AppContext";
 import { useNavigate } from 'react-router-dom';
-import { HeaderStyle, WebsiteLogoNav } from "../styles/headerStyle";
+import { HeaderStyle, Logo, HeaderDiv } from "../styles/headerStyle";
 import '../Header.css';
 
 const Header = () => {
@@ -24,13 +24,11 @@ const Header = () => {
 
   return (
     <HeaderStyle>
-      <WebsiteLogoNav>
-        <h3 className="WebSiteName-Header" onClick={() => navigate(`/`)}>creepytocoin.com</h3>
-      </WebsiteLogoNav>
-      <div>
+      <Logo onClick={() => navigate(`/`)}>Creepyto<span>Coin</span></Logo>
+      <HeaderDiv>
         <input type='text' onChange={(event) => handleChange(event)} />
         <button type="button" onClick={() => searchByNameBtn()}>Pesquisar</button>
-      </div>
+      </HeaderDiv>
     </HeaderStyle>
   )
 }
