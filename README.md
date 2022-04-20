@@ -1,4 +1,4 @@
 # CreepyCoin
 Cryptocoins search and explore application
 
-The purpose of this project is purely to study and remember the concepts of Front-end development.
+The purpose of this project is purely to study and remember the concepts of Front-end development and learn about Styled Components.
