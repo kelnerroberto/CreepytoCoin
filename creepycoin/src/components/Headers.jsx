@@ -1,8 +1,8 @@
 import React, { useContext, useState } from "react";
 import AppContext from "../context/AppContext";
 import { useNavigate } from 'react-router-dom';
-import { HeaderStyle, Logo, HeaderDiv } from "../styles/headerStyle";
-import '../Header.css';
+import { AiOutlineSearch } from 'react-icons/ai';
+import { HeaderStyle, Logo, SearchContainer, SearchInput, SearchButton } from "../styles/headerStyle";
 
 const Header = () => {
   const [searchBarResult, setSearchBarResult] = useState('');
@@ -25,10 +25,15 @@ const Header = () => {
   return (
     <HeaderStyle>
       <Logo onClick={() => navigate(`/`)}>Creepyto<span>Coin</span></Logo>
-      <HeaderDiv>
-        <input type='text' onChange={(event) => handleChange(event)} />
-        <button type="button" onClick={() => searchByNameBtn()}>Pesquisar</button>
-      </HeaderDiv>
+      <SearchContainer>
+        <SearchInput 
+        type='text' 
+        onChange={(event) => handleChange(event)} 
+        placeholder="Search cryptocoin"/>
+        <SearchButton type="button" onClick={() => searchByNameBtn()}>
+          <AiOutlineSearch />
+        </SearchButton>
+      </SearchContainer>
     </HeaderStyle>
   )
 }
